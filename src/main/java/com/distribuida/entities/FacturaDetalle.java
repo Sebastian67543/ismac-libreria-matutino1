@@ -8,6 +8,10 @@ public class FacturaDetalle {
     private Libro libro;
     private Factura factura;
 
+    public FacturaDetalle(){
+
+    }
+
     public FacturaDetalle(int idFacturaDetalle, int cantidad, Double subtotal, Libro libro, Factura factura) {
         this.idFacturaDetalle = idFacturaDetalle;
         this.cantidad = cantidad;

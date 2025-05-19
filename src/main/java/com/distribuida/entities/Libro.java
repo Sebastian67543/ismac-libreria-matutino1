@@ -20,15 +20,19 @@ public class Libro {
     private Categoria categoria;
     private Autor autor;
 
-    public Libro(int idLibro, String titulo, String editorial, String edicion, double numpaginas, String idioma, String descripcion, Date datetime, String tipopasta, String ISBN, double numejemplares, String portada, String presentacion, float precio, Categoria categoria, Autor autor) {
+    public Libro(){
+
+    }
+
+    public Libro(int idLibro, String titulo, String editorial, int numpaginas, String edicion, String idioma, String descripcion, Date fechaPublicacion, String tipopasta, String ISBN, int numejemplares, String portada, String presentacion, double precio, Categoria categoria, Autor autor) {
         this.idLibro = idLibro;
         this.titulo = titulo;
         this.editorial = editorial;
-        this.edicion = edicion;
         this.numpaginas = numpaginas;
+        this.edicion = edicion;
         this.idioma = idioma;
         this.descripcion = descripcion;
-        this.fechaPublicacion = datetime;
+        this.fechaPublicacion = fechaPublicacion;
         this.tipopasta = tipopasta;
         this.ISBN = ISBN;
         this.numejemplares = numejemplares;
@@ -68,7 +72,7 @@ public class Libro {
     }
 
     public void setNumpaginas(double numpaginas) {
-        this.numpaginas = numpaginas;
+        this.numpaginas = (int) numpaginas;
     }
 
     public String getEdicion() {
@@ -124,7 +128,7 @@ public class Libro {
     }
 
     public void setNumejemplares(double numejemplares) {
-        this.numejemplares = numejemplares;
+        this.numejemplares = (int) numejemplares;
     }
 
     public String getPortada() {
@@ -144,7 +148,7 @@ public class Libro {
     }
 
     public float getPrecio() {
-        return precio;
+        return (float) precio;
     }
 
     public void setPrecio(float precio) {
